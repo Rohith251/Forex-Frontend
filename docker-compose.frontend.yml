@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  frontend:
+    container_name: frontend_app
+    image: rohith0702/forex-frontend:latest
+    ports:
+      - "82:4173"
+    networks:
+      - app_network
+
+networks:
+  app_network:
+    driver: bridge
